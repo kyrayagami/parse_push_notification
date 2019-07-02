@@ -1,0 +1,46 @@
+group 'com.example.parse_push_notification'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.google.gms:google-services:4.2.0'  // Google Services plugin
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.github.parse-community.Parse-SDK-Android:parse:1.20.0'
+    implementation 'com.github.parse-community.Parse-SDK-Android:fcm:1.20.0'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+
+}
+
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
