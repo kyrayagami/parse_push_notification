@@ -9,7 +9,6 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.google.gms:google-services:4.2.0'  // Google Services plugin
     }
 }
 
@@ -42,5 +41,3 @@ dependencies {
     implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
 
 }
-
-apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin

@@ -30,7 +30,9 @@ class _MyAppState extends State<MyApp> {
       //ParsePushNotification.showAlertDialog();
       //ParsePushNotification.
       // "http://192.168.2.1:1337/parse/"
-      await ParsePushNotification.autoInitParse("http://192.168.2.1:1337/parse/","parseTestA");
+      // var serverUrl = "http://192.168.2.1:1337/parse/";
+      var serverUrl = "http://10.0.0.6:1337/parse/";
+      await ParsePushNotification.autoInitParse(serverUrl,"parseTestA");
 
 
     } on PlatformException {
